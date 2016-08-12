@@ -1,13 +1,39 @@
-<?php
-echo "Here are our files";
-$path = ".";
-$dh = opendir($path);
-$i=1;
-while (($file = readdir($dh)) !== false) {
-    if($file != "." && $file != ".." && $file != "index.php" && $file != ".htaccess" && $file != "error_log" && $file != "cgi-bin") {
-        echo "<a href='$path/$file'>$file</a><br /><br />";
-        $i++;
-    }
-}
-closedir($dh);
-?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html> 
+  <head> 
+    <title>Index of /Communication laser/</title> 
+    <style type="text/css"> 
+       td,a 
+       { 
+         font-family: courier; 
+         font-size: 12px; 
+       } 
+    </style> 
+  </head> 
+  <body> 
+    <h1>Index of /Communication laser/</h1> 
+    <table width="100%" cellpadding="2" cellspacing="0"> 
+      <tr> 
+        <td colspan="4"><hr/></td> 
+      </tr> 
+      <tr> 
+        <td><a href="file:///C:\Users\Mathieu\Documents\Projets personnels\Site GitHub\Communication laser\Bilan.pdf">Bilan.pdf</a></td> 
+        <td>200726</td> 
+        <td>13/08/2016 00:35</td> 
+      </tr> 
+      <tr> 
+        <td><a href="file:///C:\Users\Mathieu\Documents\Projets personnels\Site GitHub\Communication laser\Presentation.pdf">Presentation.pdf</a></td> 
+        <td>2497694</td> 
+        <td>06/07/2014 12:54</td> 
+      </tr> 
+      <tr> 
+        <td><a href="file:///C:\Users\Mathieu\Documents\Projets personnels\Site GitHub\Communication laser\Annexes.pdf">Annexes.pdf</a></td> 
+        <td>623579</td> 
+        <td>06/07/2014 14:17</td> 
+      </tr> 
+      <tr> 
+        <td colspan="4"><hr/></td> 
+      </tr> 
+    </table> 
+  </body> 
+</html> 
