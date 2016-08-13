@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Speed Dating - IGR 204</title>
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/sphere.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/tabs.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/topojson.js"></script>
+    <script type="text/javascript" src="js/d3/d3.js"></script>
+    <script type="text/javascript" src="js/d3/d3.geo.zoom.js"></script>
+
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/barchar.css">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/circle_packing.css">
+	<link rel="stylesheet" href="css/sunburst.css">
+</head>
+
+<body style="background: #EDECF2">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#">Speed dating</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#"><i class="icon-home icon-white"></i> Overview</a></li>
+                        <li><a href="#who"><i class="icon-user icon-white"></i> Who?</a></li>
+						<li><a href="#criteria"><i class="icon-signal icon-white"></i> Criteria evolution</a></li>
+                        <li><a href="#about"><i class="icon-info-sign icon-white"></i>About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="title">
+                Speed-Dating Through Globe
+            </div>
+            <div id="sphere">
+                <div ng-app="myapp">
+                    <div ng-controller="ctrl1">
+                        <globe data="data"></globe>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-container">
+                <ul class="tabs-menu">
+                    <li class="current"><a href="#tab-1">Profile</a></li>
+                    <li><a href="#tab-2">Partner</a></li>
+                </ul>
+
+
+                <div class="tab">
+                    <div id="tab-1" class="tab-content">
+                        <p>
+                            <div id="id">Id: </div>
+                        </p>
+                        <p>
+                            <div id="gender">Gender: </div>
+                        </p>
+                        <p>
+                            <div id="age">Age: </div>
+                        </p>
+                        <p>
+                            <div id="race">Race: </div>
+                        </p>
+                        <p>
+                            <div id="race_impact">Race Impact: </div>
+                        </p>
+                        <p>
+                            <div id="goal">Goal: </div>
+                        </p>
+                        <p>
+                            <div id="date_frequency">Date frequency: </div>
+                        </p>
+                        <p>
+                            <div id="go_out_frequency">Go out Frequency: </div>
+                        </p>
+                        <p>
+                            <div id="field">Field: </div>
+                        </p>
+                    </div>
+
+                    <div id="tab-2" class="tab-content">
+                        <p>
+                            <table border="1" cellpadding="10">
+                                <tr>
+                                    <th align="center">Age:</th>
+                                    <th align="center">Race:</th>
+                                </tr>
+                                <tr>
+                                    <td align="center"><div id="age_partner"></div></td>
+                                    <td align="center"><div id="race_partner"></div></td>
+                                </tr>
+                            </table>
+                        </p>
+                        <p>
+                            <table border="1" cellpadding="10">
+                                <tr>
+                                    <th align="center"></th>
+                                    <th align="center">Attraction</th>
+                                    <th align="center">Sincerity</th>
+                                    <th align="center">Ambition</th>
+                                    <th align="center">Intelligence</th>
+                                    <th align="center">Shared</th>
+									<th align="center">Fun</th>
+                                </tr>
+                                <tr>
+                                    <td align="center">Preferences of <br/> the partners</td>
+                                    <td align="center"><div id="att_pref"></div></td>
+                                    <td align="center"><div id="sinc_pref"></div></td>
+                                    <td align="center"><div id="amb_pref"></div></td>
+                                    <td align="center"><div id="int_pref"></div></td>
+                                    <td align="center"><div id="sh_pref"></div></td>
+									<td align="center"><div id="fun_pref"></div></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">Notes from <br/> the partners</td>
+                                    <td align="center"><div id="att_note"></div></td>
+                                    <td align="center"><div id="sinc_note"></div></td>
+                                    <td align="center"><div id="amb_note"></div></td>
+                                    <td align="center"><div id="int_note"></div></td>
+                                    <td align="center"><div id="sh_note"></div></td>
+									<td align="center"><div id="fun_note"></div></td>
+                                </tr>
+                            </table>
+                        </p>
+                        <p>
+                            <div id="match">Match: </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <section id="who" class="section dark" style="height:700px">
+        <div class="container animated hiding" data-animation="fadeInDown">
+            <div style="height:30px">
+            </div>
+            <h1>Who?</h1>
+            <div id="circle_packing">
+            </div>
+        </div>
+    </section>
+	
+	<section id="criteria" class="section dark" style="height:850px">
+        <div class="container animated hiding" data-animation="fadeInDown">
+            <div style="height:30px">
+            </div>
+            <h1>Criteria evolution through waves</h1>
+            <div id="sun_burst1">
+            </div>
+			<br>
+			<div id="sun_burst2">
+            </div>
+            <div id="legend-block">
+                <table id="table-legend">
+                    <tr>
+                        <td>Questions</td>
+                        <td class="legend">
+                            <table>
+                                <tr>
+                                    <td class="color" id="lookFor"></td>
+                                    <td class="label_legend">What do you look for in the opposite sex ?</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="legend">
+                            <table>
+                                <tr>
+                                    <td class="color" id="fellowLookFor"></td>
+                                    <td class="label_legend">What do you think your fellow men/women looks for?</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="legend">
+                            <table>
+                                <tr>
+                                    <td class="color" id="oppLookFor"></td>
+                                    <td class="label_legend">What do you think the opposite sex looks for ?</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="legend">
+                            <table>
+                                <tr>
+                                    <td class="color" id="measUp"></td>
+                                    <td class="label_legend">How do you think you measure up ?</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="legend">
+                            <table>
+                                <tr>
+                                    <td class="color" id="perc"></td>
+                                    <td class="label_legend">How do you think others perceive you ?</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Answers</td>
+                        <td class="legend">
+                            <table>
+                                <tr>
+                                    <td class="color" id="shar"></td>
+                                    <td class="label_legend">Shared</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="legend">
+                            <table>
+                                <tr>
+                                    <td class="color" id="amb"></td>
+                                    <td class="label_legend">Ambitious</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="legend">
+                            <table>
+                                <tr>
+                                    <td class="color" id="fun"></td>
+                                    <td class="label_legend">Fun</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="legend">
+                            <table>
+                                <tr>
+                                    <td class="color" id="int"></td>
+                                    <td class="label_legend">Intelligent</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="legend">
+                            <table>
+                                <tr>
+                                    <td class="color" id="sinc"></td>
+                                    <td class="label_legend">Sincere</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="legend">
+                            <table>
+                                <tr>
+                                    <td class="color" id="attr"></td>
+                                    <td class="label_legend">Attractive</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+
+                </table>
+            </div>
+    </section>
+
+    <section id="about" class="section dark" style="height:220px">
+        <div class="container animated hiding" data-animation="fadeInDown">
+            <div style="height:30px">
+                <!-- <h1>eee </h1> -->
+            </div>
+            <h1>About</h1>
+            <p>This website is an IGR Project which has been realized for the IGR 204 course of Telecom ParisTech.</p>
+            <p>Team members: Maud Buffier, Léna Petersen, Shane Nana Yemming, Gautier Marin, Mathieu Renault</p>
+        </div>
+    </section>
+    <div style="background-color:#F2F2F2;height:50px;">
+        <footer class="footer light inverted" style="background-color:#F2F2F2">
+            <p> &copy; IGR 204 Project - June 2016</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript" src="js/page1.js"></script>
+<script type="text/javascript" src="js/angular_app.js"></script>
+<script type="text/javascript" src="js/circle_packing.js" style="display:none"> </script>
+<script type="text/javascript" src="js/sunburst.js"></script>
+<script type="text/javascript" src="js/d3/d3.layout.js"></script>
+
+</html>

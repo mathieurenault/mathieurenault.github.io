@@ -1,0 +1,83 @@
+{
+ "name": "speedDating",
+ "children": [
+  {
+   "name": "Gender", "size": "", "pourcentage" :"",
+   "children": [
+    {"name": "Men :", "size": 51, "pourcentage" :"%"},
+    {"name": "Women :", "size": 49, "pourcentage" : "%"}
+   ]
+  },
+  {
+   "name": "Age", "size": "","pourcentage" :"",
+   "children": [
+    {"name": "Between 20 and 25 years :", "size": 65, "pourcentage" : "%"},
+    {"name": "Between 25 and 30 years :", "size": 17, "pourcentage" : "%"},
+    {"name": "Over 30 :", "size": 18, "pourcentage" : "%"}
+   ]
+  },
+  {
+   "name": "Race", "size": "","pourcentage" :"",
+   "children": [
+    {"name": "African American :", "size": 5, "pourcentage" : "%"},
+    {"name": "European Caucasian American :", "size": 56, "pourcentage" : "%"},
+    {"name": "Latino American :", "size": 8, "pourcentage" : "%"},
+    {"name": "Asian American :", "size": 24, "pourcentage" : "%"},
+    {"name": "Others :", "size": 7, "pourcentage" : "%"}
+   ]
+  },
+  {
+   "name": "Race Impact", "size": "","pourcentage" :"",
+   "children": [
+    {"name": "Not important :", "size": 56, "pourcentage" : "%"},
+    {"name": "Important :", "size": 20, "pourcentage" : "%"},
+    {"name": "Very Important :", "size": 19, "pourcentage" : "%"},
+    {"name": "Not Tell :", "size": 5, "pourcentage" : "%"}
+   ]
+  },
+  {
+   "name": "Goal", "size": "","pourcentage" :"",
+   "children": [
+    {"name": "Seemed like a fun night out :", "size": 41, "pourcentage" : "%"},
+    {"name": "To meet new people :", "size": 36, "pourcentage" : "%"},
+    {"name": "To date :", "size": 8, "pourcentage" : "%"},
+    {"name": "Want relationship :", "size": 6, "pourcentage" : "%"},
+    {"name": "To say I did it :", "size": 9, "pourcentage" : "%"}
+   ]
+  },
+  {
+   "name": "Date Frequency", "size": "","pourcentage" :"",
+   "children": [
+    {"name": "Twice a week :", "size": 5, "pourcentage" : "%"},
+    {"name": "Once a week :", "size": 9, "pourcentage" : "%"},
+    {"name": "Twice a month :", "size": 24, "pourcentage" : "%"},
+    {"name": "Once a month :", "size": 18, "pourcentage" : "%"},
+    {"name": "Several times a year :", "size": 25, "pourcentage" : "%"},
+    {"name": "Almost never :", "size": 19, "pourcentage" : "%"}
+   ]
+  },
+  {
+   "name": "Go out Frequency", "size": "","pourcentage" :"",
+   "children": [
+    {"name": "Several times a week :", "size": 32, "pourcentage" : "%"},
+    {"name": "Twice a week :", "size": 36, "pourcentage" : "%"},
+    {"name": "Once a week :", "size": 23, "pourcentage" : "%"},
+    {"name": "Twice a month :", "size": 9, "pourcentage" : "%"} 
+      ]
+  },
+  {
+   "name": "Career", "size": "","pourcentage" :"",
+   "children": [
+    {"name": "Lawyer :", "size": 8, "pourcentage" : "%"},
+    {"name": "Research :", "size": 28, "pourcentage" : "%"},
+    {"name": "Psychologist :", "size": 6, "pourcentage" : "%"},
+    {"name": "Doctor :", "size": 10, "pourcentage" : "%"},
+    {"name": "Engineer :", "size": 5, "pourcentage" : "%"},
+    {"name": "Creative Arts :", "size": 9, "pourcentage" : "%"},
+    {"name": "Banking :", "size": 26, "pourcentage" : "%"},
+    {"name": "Humanitarian :", "size": 7, "pourcentage" : "%"},
+    {"name": "Undecided :", "size": 5, "pourcentage" : "%"}
+   ]
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+#sphere {
+	float: left;
+	width: 50%;
+}
+
+#tabs-container {
+	float: right;
+	width: 50%;
+	margin-top: 40px;
+}
+
+#circle_packing {
+	text-align: center;
+}
+
+#sun_burst1 {
+	text-align: center;
+}
+
+#sun_burst2 {
+	text-align: center;
+}

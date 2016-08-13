@@ -1,0 +1,64 @@
+{
+ "name": "Criteria",
+ "children": [
+  {
+   "name": "What do you look for in the opposite sex",
+   "color": "#468966",
+   "children": [
+    {"name": "Attractive", "size": 33},
+    {"name": "Sincere", "size": 13},
+    {"name": "Intelligent", "size": 15},
+    {"name": "Fun", "size": 19},
+    {"name": "Ambitious", "size": 7},
+    {"name": "Shared_interest", "size": 12}
+   ]
+  }
+ ,
+  {
+   "name": "What do you think your fellow men/women looks for",
+   "color": "#FFF0A5",
+   "children": [
+    {"name": "Attractive", "size": 26},
+    {"name": "Sincere", "size": 16},
+    {"name": "Intelligent", "size": 18},
+    {"name": "Fun", "size": 18},
+    {"name": "Ambitious", "size": 10},
+    {"name": "Shared_interest", "size": 13}
+   ]
+  },
+  {
+   "name": "What do you think the opposite sex looks for",
+   "color": "#FFB03B",
+   "children": [
+    {"name": "Attractive", "size": 27},
+    {"name": "Sincere", "size": 12},
+    {"name": "Intelligent", "size": 12},
+    {"name": "Fun", "size": 15},
+    {"name": "Ambitious", "size": 9},
+    {"name": "Shared_interest", "size": 11}
+   ]
+  },
+  {
+   "name": "How do you think you measure up ?",
+   "color": "#B64926",
+   "children": [
+    {"name": "Attractive", "size": 7},
+    {"name": "Sincere", "size": 8},
+    {"name": "Intelligent", "size": 8},
+    {"name": "Fun", "size": 7},
+    {"name": "Ambitious", "size": 7}
+   ]
+  },
+  {
+   "name": "How do you think others perceive you",
+   "color": "#8E2800",
+   "children": [
+    {"name": "Attractive", "size": 7},
+    {"name": "Sincere", "size": 7},
+    {"name": "Intelligent", "size": 8},
+    {"name": "Fun", "size": 7},
+    {"name": "Ambitious", "size": 7}
+   ]
+  }
+ ]
+}

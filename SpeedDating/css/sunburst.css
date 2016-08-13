@@ -1,0 +1,57 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+
+}
+
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#legend-block {
+  position: relative;
+  margin-top: 40px;
+}
+#table-legend {
+  padding: 10px;
+  font-size: 15px;
+}
+#inset-label {
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  font-size : 20px;
+  background-color: white;
+  left: 30px;
+  top: -1em;
+} 
+
+td.color {
+  width: 20px;
+  height: 20px;
+  background-color: aqua;
+}
+
+td.label_legend {
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+td.legend {
+  width: 200px;
+}
+
+#shar { background-color: #FD8D3C; }
+#amb { background-color: #E6550D; }
+#fun { background-color: #C6DBEF; }
+#int { background-color: #9ECAE1; }
+#sinc { background-color: #6BAED6; }
+#attr { background-color: #3182BD; }
+#lookFor { background-color: #468966; }
+#fellowLookFor { background-color: #FFF0A5; }
+#oppLookFor { background-color: #FFB03B; }
+#measUp { background-color: #B64926; }
+#perc { background-color: #8E2800; }

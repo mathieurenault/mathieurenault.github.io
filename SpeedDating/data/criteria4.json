@@ -1,0 +1,29 @@
+{
+ "name": "Criteria",
+ "children": [
+  {
+   "name": "What do you look for in the opposite sex",
+   "color": "#468966",
+   "children": [
+    {"name": "Attractive", "size": 21},
+    {"name": "Sincere", "size": 15},
+    {"name": "Intelligent", "size": 17},
+    {"name": "Fun", "size": 15},
+    {"name": "Ambitious", "size": 11},
+    {"name": "Shared_interest", "size": 12}
+   ]
+  }
+ ,
+  {
+   "name": "How do you think others perceive you",
+   "color": "#8E2800",
+   "children": [
+    {"name": "Attractive", "size": 7},
+    {"name": "Sincere", "size": 8},
+    {"name": "Intelligent", "size": 8},
+    {"name": "Fun", "size": 8},
+    {"name": "Ambitious", "size": 7}
+   ]
+  }
+ ]
+}
