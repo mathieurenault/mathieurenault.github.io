@@ -44,12 +44,12 @@ td.legend {
   width: 200px;
 }
 
-#shar { background-color: #FD8D3C; }
-#amb { background-color: #E6550D; }
-#fun { background-color: #C6DBEF; }
-#int { background-color: #9ECAE1; }
-#sinc { background-color: #6BAED6; }
-#attr { background-color: #3182BD; }
+#shar { background-color: #FED2A1; }
+#amb { background-color:  #F6B170; }
+#fun { background-color:  #F9903D; }
+#int { background-color: #E6550D; }
+#sinc { background-color: #C6DBEF }
+#attr { background-color: #9ECAE1; }
 #lookFor { background-color: #468966; }
 #fellowLookFor { background-color: #FFF0A5; }
 #oppLookFor { background-color: #FFB03B; }
